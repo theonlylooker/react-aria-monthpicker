@@ -1,6 +1,6 @@
-import { CalendarCell, type CalendarGridProps } from "react-aria-components";
+import { type CalendarGridProps } from "react-aria-components";
 import type { CalendarState } from "react-stately";
-import { useCalendarGrid } from "react-aria";
+import { useCalendarGrid, useCalendarCell } from "react-aria";
 import { useState } from "react";
 
 interface WeekCalendarGridProps extends CalendarGridProps {
@@ -29,4 +29,12 @@ export const MonthCalendarGrid = ({
       </tbody>
     </table>
   );
+};
+
+interface monthCell {
+  children: React.ReactNode;
+}
+export const monthCell = ({ children }: monthCell) => {
+  const a = useCalendarCell();
+  return <button>{children}</button>;
 };

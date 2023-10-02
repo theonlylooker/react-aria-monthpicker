@@ -5,7 +5,7 @@ const App = () => {
     <div className="text-4xl">
       <h1>text</h1>
       <Logo />
-      <CalendarI></CalendarI>
+      <CalendarI />
     </div>
   );
 };
